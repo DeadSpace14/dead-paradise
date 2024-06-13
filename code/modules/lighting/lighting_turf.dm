@@ -78,10 +78,9 @@
 				has_opaque_atom = TRUE
 				break
 
-/turf/Exited(atom/movable/Obj, atom/newloc)
+/turf/Exited(atom/movable/departed, atom/newLoc)
 	. = ..()
-
-	if(Obj && Obj.opacity)
+	if(departed?.opacity)
 		recalc_atom_opacity() // Make sure to do this before reconsider_lights(), incase we're on instant updates.
 		reconsider_lights()
 
