@@ -139,13 +139,12 @@
 	initialized = FALSE
 	..()
 
-/turf/attack_hand(mob/user as mob)
+/turf/attack_hand(mob/user)
 	SEND_SIGNAL(src, COMSIG_ATOM_ATTACK_HAND, user)
 	user.Move_Pulled(src)
 
 /turf/attack_robot(mob/user)
-	if(Adjacent(user))
-		user.Move_Pulled(src)
+	user.Move_Pulled(src)
 
 /turf/ex_act(severity)
 	return FALSE
@@ -826,3 +825,9 @@
 			return TRUE
 
 	return FALSE
+
+
+/turf/grab_attack(mob/living/grabber, atom/movable/grabbed_thing)
+	. = TRUE
+	grabber.Move_Pulled(src)
+
