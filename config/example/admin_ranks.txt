@@ -28,17 +28,10 @@
 # Admin Ranks
 Admin Observer
 Mentor					+MENTOR
-Moderator               +MOD
-Trial Admin             +ADMIN +BAN +DEBUG +REJUVINATE
-Game Admin              +ADMIN +BAN +DEBUG +REJUVINATE +BUILDMODE +EVENT +SERVER +POSSESS +STEALTH +VAREDIT +SOUND +SPAWN
-Senior Admin			+ADMIN +BAN +DEBUG +REJUVINATE +BUILDMODE +EVENT +SERVER +POSSESS +STEALTH +VAREDIT +SOUND +SPAWN
-Retired Admin  			+ADMIN +BAN +STEALTH +VAREDIT +SPAWN
-Head of Staff           +EVERYTHING
-
-Hosting Provider        +EVERYTHING
-
-# Coder Ranks
-Trial Coder				+ADMIN +VAREDIT +REJUVINATE +DEBUG
-Coders                  +ADMIN +VAREDIT +REJUVINATE +DEBUG +BUILDMODE +EVENT +SERVER +POSSESS +STEALTH +SOUND +SPAWN
-Retired Coder			+ADMIN +VAREDIT +REJUVINATE +DEBUG +BUILDMODE +EVENT +SERVER +POSSESS +STEALTH +SOUND +SPAWN +BAN
-Maintainers             +EVERYTHING
+Moderator                               +MOD
+Junior Administrator                    +ADMIN +BAN +STEALTH +REJUVINATE                                                              +SOUND +SPAWN
+Administrator                           +ADMIN +BAN +STEALTH +REJUVINATE +DEBUG +BUILDMODE +EVENT +SERVER +POSSESS +PROCCALL +VAREDIT +SOUND +SPAWN
+Senior Administrator			+ADMIN +BAN +STEALTH +REJUVINATE +DEBUG +BUILDMODE +EVENT +SERVER +POSSESS +PROCCALL +VAREDIT +SOUND +SPAWN +RIGHTS
+Curator                                 +EVERYTHING
+Host                                    +EVERYTHING
+Head Coder                              +EVERYTHING
