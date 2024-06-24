@@ -134,7 +134,7 @@ window "mainwindow"
 		saved-params = "pos;size;is-minimized;is-maximized"
 		statusbar = false
 		is-maximized = true
-		icon = 'icons\\paradise.png'
+		icon = 'icons\\deadpara.png'
 		macro = "default"
 		menu = "menu"
 	elem "asset_cache_browser"
