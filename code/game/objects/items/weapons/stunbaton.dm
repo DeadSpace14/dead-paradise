@@ -13,7 +13,7 @@
 	attack_verb = list("beaten")
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
 	/// Stamina damage
-	var/staminaforce = 20
+	var/staminaforce = 35
 	/// How many life ticks does the stun last for
 	var/stunforce = 2 SECONDS
 	/// Is the baton currently turned on
@@ -24,7 +24,7 @@
 	var/throw_hit_chance = 50
 	var/obj/item/stock_parts/cell/high/cell
 	/// the initial cooldown tracks the time between swings. tracks the world.time when the baton is usable again.
-	var/cooldown = 0.8 SECONDS
+	var/cooldown = 2.5 SECONDS
 
 
 /obj/item/melee/baton/Initialize(mapload)
@@ -260,8 +260,8 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 3
 	throwforce = 5
-	staminaforce = 25
-	stunforce = 0.5 SECONDS
+	staminaforce = 20
+	stunforce = 1.5 SECONDS
 	hitcost = 500
 	throw_hit_chance = 50
 	slot_flags = ITEM_SLOT_BACK
