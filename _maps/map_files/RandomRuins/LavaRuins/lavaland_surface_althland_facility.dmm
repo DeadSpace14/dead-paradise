@@ -410,7 +410,7 @@
 	},
 /area/ruin/unpowered)
 "kz" = (
-/obj/effect/spawner/random_spawners/wall_rusted_maybe,
+/obj/effect/spawner/random_spawners/wall_rusted_30,
 /turf/simulated/wall/r_wall,
 /area/lavaland/surface/outdoors)
 "kK" = (
@@ -862,7 +862,7 @@
 	},
 /area/ruin/unpowered)
 "xH" = (
-/obj/effect/spawner/random_spawners/wall_rusted_maybe,
+/obj/effect/spawner/random_spawners/wall_rusted_30,
 /turf/simulated/wall/r_wall,
 /area/ruin/unpowered)
 "xS" = (
@@ -1284,10 +1284,11 @@
 	},
 /area/ruin/unpowered)
 "KH" = (
-/obj/machinery/conveyor/west{
+/obj/structure/plasticflaps,
+/obj/machinery/conveyor/inverted{
+	id = "mining_internal";
 	dir = 5
 	},
-/obj/structure/plasticflaps,
 /turf/simulated/floor{
 	nitrogen = 23;
 	oxygen = 14;

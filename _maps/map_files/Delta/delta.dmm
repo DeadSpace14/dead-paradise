@@ -182,7 +182,7 @@
 	dwidth = 2;
 	height = 18;
 	id = "skipjack_ne";
-	name = "northeast of SS13";
+	name = "northeast of station";
 	width = 19
 	},
 /turf/space{
@@ -215,9 +215,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/mob/living/simple_animal/bot/secbot/armsky{
-	auto_patrol = 1
-	},
+/mob/living/simple_animal/bot/secbot/armsky,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -1037,7 +1035,7 @@
 	dwidth = 2;
 	height = 18;
 	id = "skipjack_nw";
-	name = "northwest of SS13";
+	name = "northwest of station";
 	width = 19
 	},
 /turf/space{
@@ -2930,7 +2928,7 @@
 /area/hallway/secondary/entry/additional)
 "ayc" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/grille_often,
+/obj/effect/spawner/random_spawners/grille_50,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
@@ -3755,7 +3753,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small,
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/wood/fancy/oak,
 /area/maintenance/trading)
 "aDx" = (
@@ -4266,8 +4264,9 @@
 "aGE" = (
 /obj/structure/closet/crate,
 /obj/effect/spawner/lootdrop/maintenance/tripple,
-/obj/machinery/conveyor/north{
-	id = "cargodelivery"
+/obj/machinery/conveyor{
+	id = "cargodelivery";
+	dir = 1
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/delivery)
@@ -4883,8 +4882,9 @@
 	},
 /area/crew_quarters/courtroom)
 "aKF" = (
-/obj/machinery/conveyor/north{
-	id = "QMLoad2"
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	dir = 1
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
@@ -6093,10 +6093,6 @@
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/trading)
 "aSl" = (
-/obj/machinery/conveyor{
-	dir = 9;
-	id = "garbage"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -6104,6 +6100,10 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 9
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "aSy" = (
@@ -7830,8 +7830,9 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/trunk,
-/obj/machinery/conveyor/west{
-	id = "cargodisposals"
+/obj/machinery/conveyor{
+	id = "cargodisposals";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
@@ -9111,7 +9112,7 @@
 	},
 /area/maintenance/bar)
 "bjW" = (
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/plating,
 /area/maintenance/casino)
 "bkf" = (
@@ -9440,8 +9441,8 @@
 /turf/simulated/floor/plasteel,
 /area/hallway/secondary/entry/commercial)
 "blZ" = (
-/obj/machinery/vending/security,
 /obj/effect/decal/warning_stripes/red/hollow,
+/obj/item/twohanded/required/kirbyplants,
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
@@ -10206,10 +10207,11 @@
 /area/atmos)
 "brF" = (
 /obj/structure/plasticflaps/mining,
-/obj/machinery/conveyor/west{
-	id = "QMLoad2"
-	},
 /obj/effect/spawner/lootdrop/maintenance/double,
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "brG" = (
@@ -10497,8 +10499,9 @@
 /turf/simulated/floor/plasteel,
 /area/quartermaster/sorting)
 "bta" = (
-/obj/machinery/conveyor/northwest{
-	id = "QMLoad2"
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	dir = 9
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
@@ -12687,7 +12690,7 @@
 	},
 /area/engine/break_room)
 "bBB" = (
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/glass/reinforced,
 /area/maintenance/trading)
 "bBC" = (
@@ -12799,7 +12802,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/carpet,
 /area/maintenance/casino)
 "bCc" = (
@@ -12840,13 +12843,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "bCh" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "garbage"
-	},
 /obj/structure/window/reinforced,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -13070,7 +13073,7 @@
 /area/maintenance/fpmaint)
 "bCV" = (
 /obj/structure/lattice,
-/obj/effect/spawner/random_spawners/fungus_probably,
+/obj/effect/spawner/random_spawners/fungus_70,
 /turf/simulated/wall,
 /area/maintenance/kitchen)
 "bDb" = (
@@ -14549,12 +14552,12 @@
 /turf/simulated/floor/wood/fancy/light,
 /area/crew_quarters/captain)
 "bKF" = (
-/obj/machinery/conveyor{
-	dir = 5;
-	id = "garbage"
-	},
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 5
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -14569,8 +14572,8 @@
 "bKK" = (
 /obj/machinery/recycler,
 /obj/machinery/conveyor{
-	dir = 4;
-	id = "garbage"
+	id = "garbage";
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -14703,7 +14706,7 @@
 "bLO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/turretid/stun{
-	control_area = "\improper AI Satellite Antechamber";
+	control_area = "I Satellite Antechamber";
 	name = "AI Antechamber Turret Control";
 	pixel_y = 28;
 	req_access = list(75)
@@ -16097,7 +16100,7 @@
 	dir = 4
 	},
 /obj/machinery/turretid/stun{
-	control_area = "\improper AI Satellite";
+	control_area = "AI Satellite";
 	name = "AI Antechamber Turret Control";
 	pixel_x = -32;
 	req_access = list(75)
@@ -16262,7 +16265,7 @@
 	dir = 4
 	},
 /obj/machinery/turretid/stun{
-	control_area = "\improper AI Satellite";
+	control_area = "AI Satellite";
 	name = "AI Antechamber Turret Control";
 	pixel_x = 32;
 	req_access = list(75)
@@ -16716,7 +16719,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/broken_bottle,
 /obj/item/chair/stool,
-/obj/effect/spawner/random_spawners/blood_often,
+/obj/effect/spawner/random_spawners/blood_20,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint3)
 "bUt" = (
@@ -17439,7 +17442,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/spawner/random_spawners/grille_maybe,
+/obj/effect/spawner/random_spawners/grille_13,
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint)
 "bXL" = (
@@ -18684,7 +18687,7 @@
 	},
 /area/hallway/secondary/entry)
 "cdl" = (
-/obj/effect/spawner/random_spawners/oil_maybe,
+/obj/effect/spawner/random_spawners/oil_20,
 /obj/structure/grille/broken,
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
@@ -18800,18 +18803,20 @@
 /area/bridge)
 "cdQ" = (
 /obj/effect/decal/warning_stripes/east,
-/obj/machinery/conveyor/west{
-	id = "QMLoad2"
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	dir = 8
+	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
 "cdR" = (
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/conveyor/northwest/ccw{
-	id = "QMLoad2"
+/obj/machinery/conveyor/inverted{
+	id = "QMLoad2";
+	dir = 6
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
@@ -19191,7 +19196,7 @@
 	},
 /area/atmos)
 "cfD" = (
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -20333,8 +20338,9 @@
 /area/maintenance/fpmaint)
 "clQ" = (
 /obj/structure/plasticflaps/mining,
-/obj/machinery/conveyor/west{
-	id = "QMLoad2"
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -21374,14 +21380,16 @@
 /area/janitor)
 "cqZ" = (
 /obj/structure/plasticflaps,
-/obj/machinery/conveyor/west{
-	id = "cargodisposals"
+/obj/machinery/conveyor{
+	id = "cargodisposals";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
 "crg" = (
-/obj/machinery/conveyor/west{
-	id = "cargodisposals"
+/obj/machinery/conveyor{
+	id = "cargodisposals";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
@@ -21389,8 +21397,9 @@
 /obj/machinery/camera{
 	c_tag = "Cargo Backroom"
 	},
-/obj/machinery/conveyor/west{
-	id = "cargodisposals"
+/obj/machinery/conveyor{
+	id = "cargodisposals";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
@@ -21599,8 +21608,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/conveyor/west{
-	id = "cargodisposals"
+/obj/machinery/conveyor{
+	id = "cargodisposals";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
@@ -21643,8 +21653,9 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/trunk,
-/obj/machinery/conveyor/west{
-	id = "cargodisposals"
+/obj/machinery/conveyor{
+	id = "cargodisposals";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
@@ -21665,8 +21676,9 @@
 	},
 /area/hallway/secondary/entry/commercial)
 "csF" = (
-/obj/machinery/conveyor/northwest/ccw{
-	id = "cargodelivery"
+/obj/machinery/conveyor/inverted{
+	id = "cargodelivery";
+	dir = 6
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/sorting)
@@ -23023,7 +23035,8 @@
 "cyH" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "cargodisposals";
-	name = "Cargo Disposals"
+	name = "Cargo Disposals";
+	dir = 8
 	},
 /turf/simulated/floor/plasteel{
 	dir = 9;
@@ -23636,8 +23649,9 @@
 	id_tag = "QMLoaddoor";
 	name = "supply dock loading door"
 	},
-/obj/machinery/conveyor/east{
-	id = "QMLoad"
+/obj/machinery/conveyor{
+	id = "QMLoad";
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -24503,7 +24517,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/grille_maybe,
+/obj/effect/spawner/random_spawners/grille_13,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "whitehall"
@@ -24935,8 +24949,9 @@
 	},
 /area/crew_quarters/serviceyard)
 "cGl" = (
-/obj/machinery/conveyor/east{
-	id = "QMLoad"
+/obj/machinery/conveyor{
+	id = "QMLoad";
+	dir = 4
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -26075,7 +26090,8 @@
 "cLd" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "QMLoad2";
-	name = "Download"
+	name = "Download";
+	dir = 8
 	},
 /obj/effect/decal/warning_stripes/east,
 /turf/simulated/floor/plasteel,
@@ -27961,10 +27977,6 @@
 	pixel_y = 32
 	},
 /obj/item/storage/box/disks,
-/obj/item/storage/box/disks{
-	pixel_x = 4;
-	pixel_y = 4
-	},
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "whitepurple"
@@ -29825,7 +29837,6 @@
 	dir = 4
 	},
 /obj/item/storage/belt/medical,
-/obj/item/storage/belt/medical,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -30108,8 +30119,9 @@
 /obj/structure/plasticflaps,
 /obj/structure/closet/crate/internals,
 /obj/effect/spawner/lootdrop/maintenance/tripple,
-/obj/machinery/conveyor/north{
-	id = "cargodelivery"
+/obj/machinery/conveyor{
+	id = "cargodelivery";
+	dir = 1
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/sorting)
@@ -32029,8 +32041,9 @@
 	},
 /area/medical/research)
 "dko" = (
-/obj/machinery/conveyor/northeast{
-	id = "QMLoad"
+/obj/machinery/conveyor{
+	id = "QMLoad";
+	dir = 5
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
@@ -32059,7 +32072,7 @@
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/effect/spawner/random_spawners/blood_often,
+/obj/effect/spawner/random_spawners/blood_20,
 /turf/simulated/floor/carpet/royalblack,
 /area/maintenance/asmaint3)
 "dkv" = (
@@ -32069,8 +32082,9 @@
 /area/maintenance/asmaint3)
 "dkw" = (
 /obj/structure/plasticflaps/mining,
-/obj/machinery/conveyor/east{
-	id = "QMLoad"
+/obj/machinery/conveyor{
+	id = "QMLoad";
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -33570,8 +33584,9 @@
 	},
 /area/maintenance/starboard)
 "dqv" = (
-/obj/machinery/conveyor/northeast/ccw{
-	id = "cargodelivery"
+/obj/machinery/conveyor/inverted{
+	id = "cargodelivery";
+	dir = 10
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/delivery)
@@ -35860,7 +35875,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/spawner/random_spawners/grille_maybe,
+/obj/effect/spawner/random_spawners/grille_13,
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint)
 "dBo" = (
@@ -37028,7 +37043,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/trading)
@@ -38625,8 +38640,9 @@
 /area/engine/engineering)
 "dMs" = (
 /obj/structure/plasticflaps,
-/obj/machinery/conveyor/west{
-	id = "cargodelivery"
+/obj/machinery/conveyor{
+	id = "cargodelivery";
+	dir = 8
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/delivery)
@@ -40958,7 +40974,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint)
 "dVV" = (
@@ -42803,8 +42819,9 @@
 /area/hallway/primary/starboard/east)
 "egs" = (
 /obj/machinery/light,
-/obj/machinery/conveyor/west{
-	id = "cargodelivery"
+/obj/machinery/conveyor{
+	id = "cargodelivery";
+	dir = 8
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/sorting)
@@ -42894,7 +42911,7 @@
 /turf/simulated/floor/plasteel,
 /area/bridge/vip)
 "ehi" = (
-/obj/effect/spawner/random_spawners/fungus_maybe,
+/obj/effect/spawner/random_spawners/fungus_30,
 /turf/simulated/wall,
 /area/maintenance/disposal)
 "ehl" = (
@@ -43698,8 +43715,9 @@
 	id_tag = "QMLoaddoor2";
 	name = "supply dock loading door"
 	},
-/obj/machinery/conveyor/west{
-	id = "QMLoad2"
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -45518,7 +45536,8 @@
 /obj/effect/decal/warning_stripes/yellow,
 /obj/machinery/conveyor_switch/oneway{
 	dir = 8;
-	id = "garbage"
+	id = "garbage";
+	name = "Garbage"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
@@ -45734,7 +45753,7 @@
 	},
 /area/chapel/office)
 "eOt" = (
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
@@ -49781,8 +49800,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whitebluecorner"
+	icon_state = "white"
 	},
 /area/medical/sleeper)
 "fND" = (
@@ -50862,11 +50880,13 @@
 /area/library)
 "fZe" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/conveyor/south/ccw{
-	id = "QMLoad2"
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	dir = 8
 	},
-/obj/machinery/conveyor/west{
-	id = "QMLoad2"
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	layer = 2.494
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -52990,7 +53010,7 @@
 	},
 /area/bridge/vip)
 "gCe" = (
-/obj/effect/spawner/random_spawners/oil_maybe,
+/obj/effect/spawner/random_spawners/oil_20,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint3)
 "gCh" = (
@@ -57053,7 +57073,7 @@
 /turf/simulated/floor/engine,
 /area/toxins/explab)
 "hwq" = (
-/obj/effect/spawner/random_spawners/fungus_probably,
+/obj/effect/spawner/random_spawners/fungus_70,
 /turf/simulated/wall,
 /area/maintenance/kitchen)
 "hwu" = (
@@ -57396,7 +57416,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint)
 "hBH" = (
@@ -59628,7 +59648,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/spawner/random_spawners/oil_maybe,
+/obj/effect/spawner/random_spawners/oil_20,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "whitehall"
@@ -61021,7 +61041,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint)
 "iuy" = (
@@ -61042,16 +61062,16 @@
 	},
 /area/quartermaster/miningdock)
 "iuG" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "garbage"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -61274,7 +61294,9 @@
 	},
 /area/security/evidence)
 "ixc" = (
-/obj/machinery/door_timer/cell_2,
+/obj/machinery/door_timer/cell_2{
+	pixel_y = -32
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -62928,10 +62950,12 @@
 	},
 /area/medical/sleeper)
 "iTi" = (
-/obj/machinery/vending/medical,
-/obj/effect/decal/warning_stripes/blue/hollow,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/plasteel{
-	icon_state = "white"
+	dir = 4;
+	icon_state = "whiteblue"
 	},
 /area/medical/sleeper)
 "iTk" = (
@@ -64625,7 +64649,7 @@
 	pixel_x = -12;
 	pixel_y = -2
 	},
-/obj/effect/spawner/random_spawners/blood_often,
+/obj/effect/spawner/random_spawners/blood_20,
 /obj/machinery/button/windowtint{
 	active = 1;
 	icon_state = "light1";
@@ -65218,7 +65242,7 @@
 	icon_state = "1-8"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/blood_often,
+/obj/effect/spawner/random_spawners/blood_20,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -65526,12 +65550,12 @@
 	},
 /area/hydroponics)
 "jyC" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "garbage"
-	},
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -67369,9 +67393,9 @@
 "jWn" = (
 /obj/structure/plasticflaps,
 /obj/effect/decal/warning_stripes/yellow,
-/obj/machinery/conveyor/west{
-	dir = 1;
-	id = "cargodisposals"
+/obj/machinery/conveyor{
+	id = "cargodisposals";
+	dir = 1
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/sorting)
@@ -68993,7 +69017,7 @@
 	},
 /area/atmos)
 "krF" = (
-/obj/effect/spawner/random_spawners/fungus_probably,
+/obj/effect/spawner/random_spawners/fungus_70,
 /turf/simulated/wall,
 /area/maintenance/consarea_virology)
 "krI" = (
@@ -69335,7 +69359,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "kwN" = (
-/obj/effect/spawner/random_spawners/wall_rusted_probably,
+/obj/effect/spawner/random_spawners/wall_rusted_70,
 /turf/simulated/wall,
 /area/maintenance/tourist)
 "kwO" = (
@@ -69520,15 +69544,15 @@
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
 "kyY" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "garbage"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/window/reinforced,
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "kzc" = (
@@ -70427,10 +70451,6 @@
 /obj/structure/disposaloutlet{
 	dir = 8
 	},
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "garbage"
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -70441,6 +70461,10 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -71134,7 +71158,7 @@
 /area/hallway/secondary/exit)
 "kUR" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/grille_often,
+/obj/effect/spawner/random_spawners/grille_50,
 /turf/simulated/floor/plating,
 /area/maintenance/tourist)
 "kVo" = (
@@ -72023,7 +72047,7 @@
 	},
 /area/security/warden)
 "lhk" = (
-/obj/effect/spawner/random_spawners/grille_maybe,
+/obj/effect/spawner/random_spawners/grille_13,
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
 "lho" = (
@@ -73522,7 +73546,7 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/qm)
 "lzy" = (
-/obj/effect/spawner/random_spawners/wall_rusted_maybe,
+/obj/effect/spawner/random_spawners/wall_rusted_30,
 /turf/simulated/wall,
 /area/maintenance/engineering)
 "lzz" = (
@@ -74216,7 +74240,6 @@
 	},
 /area/library)
 "lIC" = (
-/obj/machinery/vending/medical,
 /turf/simulated/floor/plasteel{
 	dir = 6;
 	icon_state = "whiteblue"
@@ -74849,7 +74872,7 @@
 /area/crew_quarters/heads/hop)
 "lPW" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/fungus_maybe,
+/obj/effect/spawner/random_spawners/fungus_30,
 /turf/simulated/wall,
 /area/maintenance/library)
 "lQa" = (
@@ -75805,7 +75828,7 @@
 /turf/simulated/floor/engine,
 /area/security/execution)
 "mbR" = (
-/obj/effect/spawner/random_spawners/wall_rusted_probably,
+/obj/effect/spawner/random_spawners/wall_rusted_70,
 /turf/simulated/wall,
 /area/toxins/sm_test_chamber)
 "mbT" = (
@@ -76063,7 +76086,7 @@
 	},
 /area/bridge)
 "mfv" = (
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
 "mfz" = (
@@ -78377,8 +78400,9 @@
 /area/hallway/primary/central/west)
 "mEg" = (
 /obj/effect/spawner/lootdrop/maintenance,
-/obj/machinery/conveyor/east{
-	id = "QMLoad"
+/obj/machinery/conveyor{
+	id = "QMLoad";
+	dir = 4
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -79140,8 +79164,9 @@
 /area/aisat/maintenance)
 "mME" = (
 /obj/structure/plasticflaps,
-/obj/machinery/conveyor/east{
-	id = "cargodelivery"
+/obj/machinery/conveyor{
+	id = "cargodelivery";
+	dir = 4
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/delivery)
@@ -79423,8 +79448,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/machinery/vending/medical,
 /obj/structure/cable,
+/obj/structure/table/reinforced,
+/obj/item/storage/belt/medical,
 /turf/simulated/floor/plasteel{
 	dir = 6;
 	icon_state = "whiteblue"
@@ -79460,7 +79486,7 @@
 	dwidth = 2;
 	height = 18;
 	id = "skipjack_sw";
-	name = "southwest of SS13";
+	name = "southwest of station";
 	width = 19
 	},
 /turf/space{
@@ -80608,7 +80634,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/effect/spawner/random_spawners/grille_often,
+/obj/effect/spawner/random_spawners/grille_50,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint4)
 "neW" = (
@@ -80632,8 +80658,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whiteblue"
+	icon_state = "white"
 	},
 /area/medical/sleeper)
 "nfb" = (
@@ -82871,7 +82896,7 @@
 	},
 /area/turret_protected/aisat_interior)
 "nFe" = (
-/obj/effect/spawner/random_spawners/fungus_maybe,
+/obj/effect/spawner/random_spawners/fungus_30,
 /turf/simulated/wall,
 /area/maintenance/library)
 "nFf" = (
@@ -83577,8 +83602,9 @@
 	},
 /area/security/permahallway)
 "nNc" = (
-/obj/machinery/conveyor/north{
-	id = "QMLoad"
+/obj/machinery/conveyor{
+	id = "QMLoad";
+	dir = 1
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
@@ -85166,16 +85192,12 @@
 	},
 /area/crew_quarters/locker)
 "ogY" = (
-/obj/machinery/vending/medical,
-/obj/effect/decal/warning_stripes/blue/hollow,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/item/radio/intercom{
 	pixel_x = 30
 	},
 /turf/simulated/floor/plasteel{
-	icon_state = "white"
+	dir = 4;
+	icon_state = "whiteblue"
 	},
 /area/medical/sleeper)
 "ogZ" = (
@@ -85248,8 +85270,8 @@
 /area/maintenance/library)
 "oht" = (
 /obj/machinery/conveyor{
-	dir = 4;
-	id = "garbage"
+	id = "garbage";
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -86187,7 +86209,7 @@
 	dir = 1
 	},
 /obj/machinery/turretid/stun{
-	control_area = "\improper AI Upload Chamber";
+	control_area = "AI Upload Chamber";
 	name = "AI Upload Turret Control";
 	pixel_y = -24;
 	req_access = list(75)
@@ -86586,13 +86608,15 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/machinery/conveyor/south/ccw{
-	id = "QMLoad2"
-	},
-/obj/machinery/conveyor/west{
-	id = "QMLoad2"
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	dir = 8
+	},
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	layer = 2.494
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
 	},
@@ -86904,7 +86928,7 @@
 /area/medical/research/nhallway)
 "oBz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "tranquillite"
@@ -92096,7 +92120,9 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/locker)
 "pIy" = (
-/obj/machinery/door_timer/cell_4,
+/obj/machinery/door_timer/cell_4{
+	pixel_y = -32
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -92180,17 +92206,6 @@
 /obj/machinery/vending/sovietsoda,
 /turf/simulated/floor/plating,
 /area/maintenance/kitchen)
-"pIZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plasteel{
-	icon_state = "whitebluecorner"
-	},
-/area/medical/sleeper)
 "pJg" = (
 /obj/machinery/light{
 	dir = 8
@@ -97259,7 +97274,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/oil_maybe,
+/obj/effect/spawner/random_spawners/oil_20,
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -97307,7 +97322,7 @@
 /obj/item/reagent_containers/food/snacks/meat/humanoid/human,
 /obj/item/reagent_containers/food/snacks/meat/humanoid/human,
 /obj/effect/decal/warning_stripes/north,
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -97561,7 +97576,7 @@
 /area/crew_quarters/heads/hop)
 "qQQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/grille_often,
+/obj/effect/spawner/random_spawners/grille_50,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "whitehall"
@@ -97587,8 +97602,9 @@
 "qRa" = (
 /obj/effect/spawner/lootdrop/maintenance,
 /obj/effect/decal/warning_stripes/east,
-/obj/machinery/conveyor/east{
-	id = "QMLoad"
+/obj/machinery/conveyor{
+	id = "QMLoad";
+	dir = 4
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
@@ -98001,10 +98017,11 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/theatre)
 "qXd" = (
-/obj/machinery/vending/security,
 /obj/machinery/newscaster/security_unit{
 	pixel_y = 32
 	},
+/obj/item/twohanded/required/kirbyplants,
+/obj/effect/decal/warning_stripes/red/hollow,
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
@@ -100155,18 +100172,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/assembly/chargebay)
-"rwH" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whiteblue"
-	},
-/area/medical/sleeper)
 "rwM" = (
 /obj/structure/table,
 /obj/item/toy/figure/magistrate{
@@ -100364,7 +100369,7 @@
 /area/maintenance/detectives_office)
 "rze" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -101544,7 +101549,7 @@
 /turf/simulated/floor/carpet,
 /area/library)
 "rMu" = (
-/obj/effect/spawner/random_spawners/wall_rusted_maybe,
+/obj/effect/spawner/random_spawners/wall_rusted_30,
 /turf/simulated/wall,
 /area/maintenance/library)
 "rMN" = (
@@ -102923,7 +102928,7 @@
 /turf/simulated/floor/plasteel,
 /area/medical/virology/lab)
 "seJ" = (
-/obj/effect/spawner/random_spawners/oil_maybe,
+/obj/effect/spawner/random_spawners/oil_20,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
 "seM" = (
@@ -103705,7 +103710,7 @@
 	},
 /area/medical/surgery/north)
 "soZ" = (
-/obj/effect/spawner/random_spawners/wall_rusted_probably,
+/obj/effect/spawner/random_spawners/wall_rusted_70,
 /turf/simulated/wall,
 /area/maintenance/asmaint3)
 "spb" = (
@@ -105757,7 +105762,7 @@
 "sNY" = (
 /obj/item/twohanded/required/kirbyplants,
 /obj/machinery/turretid/stun{
-	control_area = "\improper Telecoms Central Compartment";
+	control_area = "Telecoms Central Compartment";
 	name = "AI Antechamber Turret Control";
 	pixel_y = -26;
 	req_access = list(75)
@@ -109422,7 +109427,7 @@
 "tGd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/fungus_maybe,
+/obj/effect/spawner/random_spawners/fungus_30,
 /turf/simulated/wall,
 /area/maintenance/library)
 "tGi" = (
@@ -111027,7 +111032,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
 "tWL" = (
-/obj/effect/spawner/random_spawners/blood_often,
+/obj/effect/spawner/random_spawners/blood_20,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint3)
 "tWM" = (
@@ -112997,7 +113002,6 @@
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/storage/box/syringes,
 /obj/machinery/light_switch{
 	pixel_x = 7;
 	pixel_y = 27
@@ -113406,11 +113410,13 @@
 	},
 /area/turret_protected/aisat)
 "uAf" = (
-/obj/machinery/conveyor/south/ccw{
-	id = "QMLoad2"
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	dir = 8
 	},
-/obj/machinery/conveyor/west{
-	id = "QMLoad2"
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	layer = 2.494
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -117083,7 +117089,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /mob/living/simple_animal/mouse/rat,
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
@@ -117403,7 +117409,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/grille_maybe,
+/obj/effect/spawner/random_spawners/grille_13,
 /turf/simulated/floor/plating,
 /area/maintenance/tourist)
 "vwq" = (
@@ -118920,11 +118926,9 @@
 	},
 /area/medical/genetics)
 "vOC" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/conveyor/northeast/ccw{
-	id = "QMLoad"
+/obj/machinery/conveyor/inverted{
+	id = "QMLoad";
+	dir = 10
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
@@ -119827,11 +119831,12 @@
 	},
 /area/gateway)
 "vXN" = (
-/obj/machinery/conveyor/west{
-	id = "cargodelivery"
-	},
 /obj/structure/closet/crate,
 /obj/effect/spawner/lootdrop/maintenance/tripple,
+/obj/machinery/conveyor{
+	id = "cargodelivery";
+	dir = 8
+	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/sorting)
 "vXZ" = (
@@ -120472,7 +120477,7 @@
 	},
 /area/toxins/mixing)
 "wfx" = (
-/obj/effect/spawner/random_spawners/fungus_probably,
+/obj/effect/spawner/random_spawners/fungus_70,
 /turf/simulated/wall,
 /area/maintenance/asmaint4)
 "wfQ" = (
@@ -120680,11 +120685,13 @@
 /area/assembly/robotics)
 "wjh" = (
 /obj/effect/spawner/lootdrop/maintenance,
-/obj/machinery/conveyor/south/ccw{
-	id = "QMLoad2"
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	dir = 8
 	},
-/obj/machinery/conveyor/west{
-	id = "QMLoad2"
+/obj/machinery/conveyor{
+	id = "QMLoad2";
+	layer = 2.494
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -123028,7 +123035,7 @@
 	},
 /area/crew_quarters/fitness)
 "wLd" = (
-/obj/effect/spawner/random_spawners/wall_rusted_probably,
+/obj/effect/spawner/random_spawners/wall_rusted_70,
 /turf/simulated/wall,
 /area/crew_quarters/theatre)
 "wLq" = (
@@ -127496,7 +127503,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint)
 "xJK" = (
-/obj/effect/spawner/random_spawners/wall_rusted_maybe,
+/obj/effect/spawner/random_spawners/wall_rusted_30,
 /turf/simulated/wall/rust,
 /area/maintenance/engineering)
 "xJW" = (
@@ -127576,8 +127583,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "whiteblue"
+	dir = 4;
+	icon_state = "whitebluecorner"
 	},
 /area/medical/sleeper)
 "xKE" = (
@@ -128329,7 +128336,7 @@
 	},
 /area/hallway/secondary/exit)
 "xQW" = (
-/obj/effect/spawner/random_spawners/blood_maybe,
+/obj/effect/spawner/random_spawners/blood_5,
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint)
 "xQY" = (
@@ -128597,7 +128604,12 @@
 	},
 /area/maintenance/kitchen)
 "xUv" = (
-/obj/machinery/vending/medical,
+/obj/structure/table/glass,
+/obj/item/storage/box/disks{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/box/syringes,
 /turf/simulated/floor/plasteel{
 	dir = 6;
 	icon_state = "whitepurple"
@@ -129743,7 +129755,7 @@
 /area/medical/sleeper)
 "yfm" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random_spawners/wall_rusted_maybe,
+/obj/effect/spawner/random_spawners/wall_rusted_30,
 /turf/simulated/wall,
 /area/maintenance/engineering)
 "yfp" = (
@@ -157161,7 +157173,7 @@ yhg
 yhg
 yhg
 yhg
-yhg
+plO
 yhg
 yhg
 yhg
@@ -172195,8 +172207,8 @@ cXp
 cZI
 dgO
 mTO
-pIZ
-rwH
+mTO
+mTO
 nfa
 fNx
 rxv
@@ -172452,7 +172464,7 @@ cXs
 jsJ
 dix
 gra
-rcy
+tsB
 iTi
 ogY
 xKC
@@ -172710,7 +172722,7 @@ cJq
 dAl
 lTM
 kjk
-dAl
+pEi
 pEi
 uVw
 tik
