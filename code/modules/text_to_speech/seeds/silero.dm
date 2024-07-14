@@ -4398,7 +4398,6 @@
 	value = "Transformers_War_of_Cybertron_soundwave"
 	category = TTS_CATEGORY_TRANSFORMERS
 	gender = TTS_GENDER_MALE
-	donator_level = 1
 
 /datum/tts_seed/silero/The_Lord_of_the_Rings_Aragorn
 	name = "Aragorn"
