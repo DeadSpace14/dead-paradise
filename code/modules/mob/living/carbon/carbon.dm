@@ -674,15 +674,15 @@
 	for(var/obj/item/organ/internal/organ as anything in internal_organs)
 		organ.emp_act(severity)
 
-/mob/living/carbon/Stat()
-	..()
-	if(statpanel("Status"))
-		var/obj/item/organ/internal/xenos/plasmavessel/vessel = get_int_organ(/obj/item/organ/internal/xenos/plasmavessel)
-		if(vessel)
-			stat(null, "Plasma Stored: [vessel.stored_plasma]/[vessel.max_plasma]")
-		var/obj/item/organ/internal/wryn/glands/glands = get_int_organ(/obj/item/organ/internal/wryn/glands)
-		if(glands)
-			stat(null, "Wax: [glands.wax]")
+/mob/living/carbon/get_status_tab_items()
+	var/list/status_tab_data = ..()
+	. = status_tab_data
+	var/obj/item/organ/internal/xenos/plasmavessel/vessel = get_int_organ(/obj/item/organ/internal/xenos/plasmavessel)
+	if(vessel)
+		status_tab_data[++status_tab_data.len] = list("Plasma Stored:", "[vessel.stored_plasma]/[vessel.max_plasma]")
+	var/obj/item/organ/internal/wryn/glands/glands = get_int_organ(/obj/item/organ/internal/wryn/glands)
+	if(glands)
+		status_tab_data[++status_tab_data.len] = list("Wax: [glands.wax]")
 
 /mob/living/carbon/slip(weaken, obj/slipped_on, lube_flags, tilesSlipped)
 	if(movement_type & MOVETYPES_NOT_TOUCHING_GROUND)
@@ -901,13 +901,11 @@ so that different stomachs can handle things in different ways VB*/
 	return shock_reduction
 
 
-/mob/living/carbon/toggle_move_intent()
-	if(legcuffed)
-		to_chat(src, span_notice("Ваши ноги скованы! Вы не можете бежать, пока не снимете [legcuffed]!"))
-		m_intent = MOVE_INTENT_WALK	//Just incase
-		hud_used?.move_intent.icon_state = "walking"
-		update_move_intent_slowdown()
-		return
+/mob/living/carbon/can_change_move_intent(silent = FALSE)
+	if(m_intent == MOVE_INTENT_WALK && legcuffed)
+		if(!silent)
+			to_chat(src, span_notice("Ваши ноги скованы! Вы не можете бежать, пока не снимете [legcuffed.name]!"))
+		return FALSE
 	return ..()
 
 

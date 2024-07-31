@@ -7,6 +7,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 //atom traits
 /// Trait used to prevent an atom from component radiation emission (see radioactivity.dm)
 #define TRAIT_BLOCK_RADIATION "block_radiation"
+/// Is this atom being actively shocked? Used to prevent repeated shocks.
+#define TRAIT_BEING_SHOCKED "being_shocked"
 
 /// Weather immunities, also protect mobs inside them.
 #define TRAIT_LAVA_IMMUNE "lava_immune" //Used by lava turfs and The Floor Is Lava.
@@ -108,6 +110,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_NO_SLIP_ALL "noslip_all"
 /// Give us unsafe_unwrenching protection
 #define TRAIT_GUSTPROTECTION "gustprotection"
+/// This mob can strip other mobs.
+#define TRAIT_CAN_STRIP "can_strip"
+
 
 /// Unlinks gliding from movement speed, meaning that there will be a delay between movements rather than a single move movement between tiles
 #define TRAIT_NO_GLIDE "no_glide"

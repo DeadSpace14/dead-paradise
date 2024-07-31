@@ -140,10 +140,10 @@
 	holder.pixel_y = I.Height() - world.icon_size
 	holder.icon_state = "hudstat"
 
-/mob/living/simple_animal/hostile/swarmer/Stat()
-	..()
-	if(statpanel("Status"))
-		stat("Resources:",resources)
+/mob/living/simple_animal/hostile/swarmer/get_status_tab_items()
+	var/list/status_tab_data = ..()
+	. = status_tab_data
+	status_tab_data[++status_tab_data.len] = list("Resources:",resources)
 
 
 /mob/living/simple_animal/hostile/swarmer/move_into_vent(obj/machinery/atmospherics/ventcrawl_target, message = TRUE)
@@ -276,11 +276,11 @@
 		var/area/A = get_area(T)
 		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/shuttle) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/shuttle)))
 			to_chat(S, "<span class='warning'>Destroying this object has the potential to cause a hull breach. Aborting.</span>")
-			S.target = null
+			S.GiveTarget(null)
 			return FALSE
 		else if(istype(A, /area/engine/supermatter))
 			to_chat(S, "<span class='warning'>Disrupting the containment of a supermatter crystal would not be to our benefit. Aborting.</span>")
-			S.target = null
+			S.GiveTarget(null)
 			return FALSE
 	S.DisIntegrate(src)
 	return TRUE
@@ -391,11 +391,11 @@
 		var/area/A = get_area(T)
 		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/shuttle) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/shuttle)))
 			to_chat(S, "<span class='warning'>Destroying this object has the potential to cause a hull breach. Aborting.</span>")
-			S.target = null
+			S.GiveTarget(null)
 			return TRUE
 		else if(istype(A, /area/engine/supermatter))
 			to_chat(S, "<span class='warning'>Disrupting the containment of a supermatter crystal would not be to our benefit. Aborting.</span>")
-			S.target = null
+			S.GiveTarget(null)
 			return TRUE
 	return ..()
 
@@ -405,7 +405,7 @@
 		var/area/A = get_area(T)
 		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/shuttle) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/shuttle)))
 			to_chat(S, "<span class='warning'>Destroying this object has the potential to cause a hull breach. Aborting.</span>")
-			S.target = null
+			S.GiveTarget(null)
 			return TRUE
 	return ..()
 
@@ -416,11 +416,11 @@
 		var/area/A = get_area(T)
 		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/shuttle) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/shuttle)))
 			to_chat(S, "<span class='warning'>Destroying this object has the potential to cause a hull breach. Aborting.</span>")
-			S.target = null
+			S.GiveTarget(null)
 			return TRUE
 		else if(istype(A, /area/engine/supermatter))
 			to_chat(S, "<span class='warning'>Disrupting the containment of a supermatter crystal would not be to our benefit. Aborting.</span>")
-			S.target = null
+			S.GiveTarget(null)
 			return TRUE
 	return ..()
 
@@ -430,11 +430,11 @@
 		var/area/A = get_area(T)
 		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/shuttle) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/shuttle)))
 			to_chat(S, "<span class='warning'>Destroying this object has the potential to cause a hull breach. Aborting.</span>")
-			S.target = null
+			S.GiveTarget(null)
 			return TRUE
 		else if(istype(A, /area/engine/supermatter))
 			to_chat(S, "<span class='warning'>Disrupting the containment of a supermatter crystal would not be to our benefit. Aborting.</span>")
-			S.target = null
+			S.GiveTarget(null)
 			return TRUE
 	return ..()
 
