@@ -30,7 +30,7 @@
 # Admin Ranks
 Ментор                           +MENTOR
 Модератор                        +MODERATOR +MENTOR
-Триал Админ                      +ADMIN +BAN +MODERATOR +MENTOR
+Триал Админ                      +ADMIN +BAN +STEALTH +REJUVINATE +SOUND +SPAWN
 Админ                            +BUILDMODE +ADMIN +BAN +EVENT +SERVER +DEBUG +POSSESS +STEALTH +REJUVINATE +VAREDIT +SPAWN +PROCCALL +MODERATOR +MENTOR +VIEWRUNTIMES
 Старший Админ                    +EVERYTHING
 Куратор                          +EVERYTHING
